@@ -1,0 +1,1511 @@
+{
+	"info": {
+		"_postman_id": "68a48928-c0ed-4884-bc35-1f544da66765",
+		"name": "Fintask Teste",
+		"description": "Endpoints para: Criação, Listagem, Edição, Exclusão e Finalização de Demandas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User Anunciante",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Token a8feb138672acc49bfa4d7c1410a5e4842306609"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\":\"rafaelrizzatti2\", \"password\": \"123\", \"confirm_password\":\"123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				},
+				"description": "Create User Anunciante"
+			},
+			"response": [
+				{
+					"name": "Create User Anunciante",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Token a8feb138672acc49bfa4d7c1410a5e4842306609"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"rafaelrizzatti2\", \"password\": \"123\", \"confirm_password\":\"123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:32:47 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "143"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"username\": \"rafaelrizzatti2\",\n    \"email\": \"\",\n    \"date_joined\": \"2021-01-30T10:32:47.018432Z\",\n    \"token\": \"906575d33c5c56683ec0317d99fcad8dae3cfa98\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login Anunciante",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token a8feb138672acc49bfa4d7c1410a5e4842306609",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"username\":\"rafaelrizzatti2\", \"password\": \"123\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/users/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login",
+						""
+					]
+				},
+				"description": "Login Anunciante"
+			},
+			"response": [
+				{
+					"name": "Login Anunciante",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token a8feb138672acc49bfa4d7c1410a5e4842306609",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"username\":\"rafaelrizzatti2\", \"password\": \"123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/users/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:34:12 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "97"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"auth_token\": \"906575d33c5c56683ec0317d99fcad8dae3cfa98\",\n    \"created\": \"2021-01-30T10:32:47.061422Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Criação de Demanda de um Anunciante",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/demandas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"demandas",
+						""
+					]
+				},
+				"description": "Crição de uma demanda de um anunciante"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/demandas/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Peça Responsavel pela IA do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99595-9595\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:36:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "293"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 8,\n    \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n    \"endereco\": \"Rua Estrela Negra, n 777\",\n    \"info_contato\": \"(47) 99595-9595\",\n    \"status\": false,\n    \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Listagem de Demandas de um Anunciante",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/demandas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"demandas",
+						""
+					]
+				},
+				"description": "Listagem de Demandas de um Anunciante"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/demandas/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Peça Responsavel pela IA do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99595-9595\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:36:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "293"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 8,\n    \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n    \"endereco\": \"Rua Estrela Negra, n 777\",\n    \"info_contato\": \"(47) 99595-9595\",\n    \"status\": false,\n    \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n}"
+				},
+				{
+					"name": "Listagem de Demandas de um Anunciante",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:38:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "577"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 8,\n        \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n        \"endereco\": \"Rua Estrela Negra, n 777\",\n        \"info_contato\": \"(47) 99595-9595\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n    },\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 9,\n        \"descricao\": \"Arma Especial a Laser\",\n        \"endereco\": \"Rua Estrela Negra, n 555\",\n        \"info_contato\": \"(47) 99797-9797\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:38:27.383046Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Alteração de uma Demanda",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"descricao\":\"Tecnologia de IA Do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99797-9797\", \"status\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/demandas/8/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"demandas",
+						"8",
+						""
+					]
+				},
+				"description": "Alteração de uma Demanda"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/demandas/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Peça Responsavel pela IA do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99595-9595\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:36:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "293"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 8,\n    \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n    \"endereco\": \"Rua Estrela Negra, n 777\",\n    \"info_contato\": \"(47) 99595-9595\",\n    \"status\": false,\n    \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n}"
+				},
+				{
+					"name": "Listagem de Demandas de um Anunciante",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:38:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "577"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 8,\n        \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n        \"endereco\": \"Rua Estrela Negra, n 777\",\n        \"info_contato\": \"(47) 99595-9595\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n    },\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 9,\n        \"descricao\": \"Arma Especial a Laser\",\n        \"endereco\": \"Rua Estrela Negra, n 555\",\n        \"info_contato\": \"(47) 99797-9797\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:38:27.383046Z\"\n    }\n]"
+				},
+				{
+					"name": "Alteração de uma Demanda",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Tecnologia de IA Do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99797-9797\", \"status\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/8/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								"8",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:46:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "283"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 8,\n    \"descricao\": \"Tecnologia de IA Do R2D2\",\n    \"endereco\": \"Rua Estrela Negra, n 777\",\n    \"info_contato\": \"(47) 99797-9797\",\n    \"status\": true,\n    \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Deletando uma Demanda",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"descricao\":\"Tecnologia de IA Do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99797-9797\", \"status\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/demandas/8/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"demandas",
+						"8",
+						""
+					]
+				},
+				"description": "Deletando uma Demanda"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/demandas/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Peça Responsavel pela IA do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99595-9595\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:36:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "293"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 8,\n    \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n    \"endereco\": \"Rua Estrela Negra, n 777\",\n    \"info_contato\": \"(47) 99595-9595\",\n    \"status\": false,\n    \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n}"
+				},
+				{
+					"name": "Listagem de Demandas de um Anunciante",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:38:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "577"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 8,\n        \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n        \"endereco\": \"Rua Estrela Negra, n 777\",\n        \"info_contato\": \"(47) 99595-9595\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n    },\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 9,\n        \"descricao\": \"Arma Especial a Laser\",\n        \"endereco\": \"Rua Estrela Negra, n 555\",\n        \"info_contato\": \"(47) 99797-9797\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:38:27.383046Z\"\n    }\n]"
+				},
+				{
+					"name": "Deletando uma Demanda",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Tecnologia de IA Do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99797-9797\", \"status\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/8/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								"8",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:47:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Alteração de uma Demanda",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Tecnologia de IA Do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99797-9797\", \"status\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/8/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								"8",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:46:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "283"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 8,\n    \"descricao\": \"Tecnologia de IA Do R2D2\",\n    \"endereco\": \"Rua Estrela Negra, n 777\",\n    \"info_contato\": \"(47) 99797-9797\",\n    \"status\": true,\n    \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Finalização de uma Demanda",
+			"request": {
+				"auth": {
+					"type": "oauth1",
+					"oauth1": [
+						{
+							"key": "signatureMethod",
+							"value": "HMAC-SHA1",
+							"type": "string"
+						},
+						{
+							"key": "version",
+							"value": "1.0",
+							"type": "string"
+						},
+						{
+							"key": "addParamsToHeader",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "addEmptyParamsToSign",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/demandas/9/finalizar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"demandas",
+						"9",
+						"finalizar",
+						""
+					]
+				},
+				"description": "Finalização de uma Demanda"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/demandas/",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Peça Responsavel pela IA do R2D2\", \"endereco\": \"Rua Estrela Negra, n 777\", \"info_contato\":\"(47) 99595-9595\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:36:56 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "293"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 8,\n    \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n    \"endereco\": \"Rua Estrela Negra, n 777\",\n    \"info_contato\": \"(47) 99595-9595\",\n    \"status\": false,\n    \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n}"
+				},
+				{
+					"name": "Listagem de Demandas de um Anunciante",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:38:32 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "577"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 8,\n        \"descricao\": \"Peça Responsavel pela IA do R2D2\",\n        \"endereco\": \"Rua Estrela Negra, n 777\",\n        \"info_contato\": \"(47) 99595-9595\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:36:56.397737Z\"\n    },\n    {\n        \"anunciante\": {\n            \"id\": 4,\n            \"username\": \"rafaelrizzatti2\",\n            \"email\": \"\",\n            \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n        },\n        \"id\": 9,\n        \"descricao\": \"Arma Especial a Laser\",\n        \"endereco\": \"Rua Estrela Negra, n 555\",\n        \"info_contato\": \"(47) 99797-9797\",\n        \"status\": false,\n        \"date_created\": \"2021-01-30T10:38:27.383046Z\"\n    }\n]"
+				},
+				{
+					"name": "Finalização de uma Demanda",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Token 906575d33c5c56683ec0317d99fcad8dae3cfa98",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"descricao\":\"Arma Especial a Laser\", \"endereco\": \"Rua Estrela Negra, n 555\", \"info_contato\":\"(47) 99797-9797\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/demandas/9/finalizar/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"demandas",
+								"9",
+								"finalizar",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 30 Jan 2021 10:48:42 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.1"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"anunciante\": {\n        \"id\": 4,\n        \"username\": \"rafaelrizzatti2\",\n        \"email\": \"\",\n        \"date_joined\": \"2021-01-30T10:32:47.018432Z\"\n    },\n    \"id\": 9,\n    \"descricao\": \"Arma Especial a Laser\",\n    \"endereco\": \"Rua Estrela Negra, n 555\",\n    \"info_contato\": \"(47) 99797-9797\",\n    \"status\": true,\n    \"date_created\": \"2021-01-30T10:38:27.383046Z\"\n}"
+				}
+			]
+		}
+	]
+}
