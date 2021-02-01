@@ -1,38 +1,30 @@
-## DRF-TDD-Example
+## Fintask Teste Técnico
 
-An example Django REST framework project for test driven development.
+Desafio técnico para Fintask. O Desafio se encontra em um pdf no Projeto.
+Para execução do projeto que se encontra dentro de um docker, executar os comandos:
 
-### Test Case Scenarios
-* Test to verify registration with invalid password.
-* Test to verify registration with already exists username.
-* Test to verify registration with valid datas.
-* Tested API authentication endpoint validations.
-* Tested authenticated user authorization. 
-* Create a todo with API.
-* Update a todo with API.
-* Update a todo with API.
-* Delete a todo with API.
-* Get todo list for a user.
+* docker-compose up --build
+
+Após isso, utilizar o comando "docker ps" para pegar o ID do container que está rodando o Projeto.
+Para criar o banco de dados inicial, utilizar os comandos:
+
+* docker exec -it (container_id) python manage.py makemigrations
+* docker exec -it (container_id) python manage.py migrate
+
+Para ter acesso ao django admin, criar um super usuario com o comando:
+
+* docker exec -it (container_id) python manage.py cratesuperuser
+
+Dentro do Django Admin, como usuario Administrador, você terá acesso a todos Usuarios (Anunciantes e Administradores) e a todas Demandas.
+
+Um anunciante pode realizar o seu proprio cadastro através da API.
+Após feito cadastro ele obterá um Token, que irá permitir a manipulação de suas Demandas.
 
 ### API Endpoints
-
-#### Users
-
-* **/api/users/** (User registration endpoint)
-* **/api/users/login/** (User login endpoint)
-* **/api/users/logout/** (User logout endpoint)
-
-
-#### Todos
-
-* **/api/todos/** (Todo create and list endpoint)
-* **/api/todos/{todo-id}/** (Todo retrieve, update and destroy endpoint)
-
-### Install 
-
-    pip install -r requirements.txt
-
-### Usage
-
-    python manage.py test
+* /admin/ (Acesso apenas por Usuarios Administradores)
+* /api/users/ (Cadastro de Usuarios)
+* /api/users/login (Obtenção do Token para acesso a suas demandas)
+* /api/demandas/ (Listagem de Demandas e Criação de Demandas)
+* /api/demandas/ID/ (Leitura, Alteração e Exclusão de Demandas)
+* /api/demandas/ID/finalizar/ (Finalização de uma Demanda)
 
