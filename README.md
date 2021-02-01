@@ -1,6 +1,7 @@
 ## Fintask Teste Técnico
 
-Desafio técnico para Fintask. O Desafio se encontra em um pdf no Projeto.
+Desafio técnico para Fintask. O Desafio se encontra em um pdf no Projeto. (Avaliacao_desenvolvedor.pdf)
+
 Para execução do projeto que se encontra dentro de um docker, executar os comandos:
 
 * docker-compose up --build
