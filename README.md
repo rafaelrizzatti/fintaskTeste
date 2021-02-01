@@ -6,7 +6,7 @@ Para execução do projeto que se encontra dentro de um docker, executar os coma
 
 * docker-compose up --build
 
-Após isso, utilizar o comando "docker ps" para pegar o ID do container que está rodando o Projeto.
+Após isso, em outro terminal, utilizar o comando "docker ps" para pegar o ID do container que está rodando o Projeto.
 Para criar o banco de dados inicial, utilizar os comandos:
 
 * docker exec -it (container_id) python manage.py makemigrations
@@ -20,6 +20,10 @@ Dentro do Django Admin, como usuario Administrador, você terá acesso a todos U
 
 Um anunciante pode realizar o seu proprio cadastro através da API.
 Após feito cadastro ele obterá um Token, que irá permitir a manipulação de suas Demandas.
+
+Para execução dos Testes:
+
+* docker exec -it (container_id) python manage.py test
 
 ### API Endpoints
 * /admin/ (Acesso apenas por Usuarios Administradores)
