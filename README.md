@@ -25,6 +25,6 @@ Após feito cadastro ele obterá um Token, que irá permitir a manipulação de 
 * /api/users/ (Cadastro de Usuarios)
 * /api/users/login (Obtenção do Token para acesso a suas demandas)
 * /api/demandas/ (Listagem de Demandas e Criação de Demandas)
-* /api/demandas/ID/ (Leitura, Alteração e Exclusão de Demandas)
+* /api/demandas/ID/ (Alteração e Exclusão de Demandas)
 * /api/demandas/ID/finalizar/ (Finalização de uma Demanda)
 
