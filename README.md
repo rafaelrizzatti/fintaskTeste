@@ -28,4 +28,4 @@ Após feito cadastro ele obterá um Token, que irá permitir a manipulação de 
 * /api/demandas/ID/ (Alteração e Exclusão de Demandas)
 * /api/demandas/ID/finalizar/ (Finalização de uma Demanda)
 
-Qualquer dúvidas para execução, entrar em contato: rafael.rizzatti@gmail.com
+Quaisquer dúvidas, entrar em contato: rafael.rizzatti@gmail.com
