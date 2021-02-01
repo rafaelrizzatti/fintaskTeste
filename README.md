@@ -33,4 +33,8 @@ Para execução dos Testes:
 * /api/demandas/ID/ (Alteração e Exclusão de Demandas)
 * /api/demandas/ID/finalizar/ (Finalização de uma Demanda)
 
+Dentro do Projeto tem um arquivo que pode ser usado no Postman para importação e utilização dos Endpoints.
+
+E também aqui uma documentação do Postman para utilização em variadas linguagens: https://documenter.getpostman.com/view/7986826/TW6xp8gy
+
 Quaisquer dúvidas, entrar em contato: rafael.rizzatti@gmail.com
